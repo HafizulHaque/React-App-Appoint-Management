@@ -3,6 +3,7 @@ import { BiCalendar } from 'react-icons/bi';
 import AddAppointment from './components/AddAppointment';
 import AppointmentInfo from './components/AppointmentInfo';
 import Search from './components/Search';
+import petData from './data/data.json'
 
 function App() {
 
@@ -23,9 +24,10 @@ function App() {
   })
 
   const fetchData = useCallback(() => {
-    fetch('./data.json')
-      .then(res => res.json())
-      .then(data => setAppointmentList(data));
+    // fetch('./data.json')
+    //   .then(res => res.json())
+    //   .then(data => setAppointmentList(data));
+    setAppointmentList(petData)
   }, [])
 
   useEffect(() => {
