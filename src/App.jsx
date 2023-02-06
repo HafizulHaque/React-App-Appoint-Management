@@ -3,7 +3,7 @@ import { BiCalendar } from 'react-icons/bi';
 import AddAppointment from './components/AddAppointment';
 import AppointmentInfo from './components/AppointmentInfo';
 import Search from './components/Search';
-import petData from './data/data.json'
+import petData from './data/data'
 
 function App() {
 
@@ -35,8 +35,8 @@ function App() {
   }, [fetchData])
 
   return (
-    <div className='App container mx-auto my-3 font-thin'>
-      <h1 className="text-5xl my-3">
+    <div className='App max-w-2xl p-2 mx-auto my-3 font-thin'>
+      <h1 className="text-4xl my-3">
         <BiCalendar className='inline-block text-red-400 align-top'/>Your Appointments
       </h1>
       <AddAppointment 
@@ -60,6 +60,10 @@ function App() {
           ))
         }
       </ul>
+      <footer className='my-4 md:flex justify-between'>
+        <p className='text-center'>Developed by <strong className='text-red-400'><a href="https://www.github.com/hafizulhaque" target="_blank">Hafizul Haque</a></strong></p>
+        <p className='text-center'>Software Developer @ <a href="https://www.reddotdigitalit.com/" target="_blank"><strong className='text-red-400'>Reddot Digital IT Ltd</strong></a></p>
+      </footer>
     </div>
   )
 }

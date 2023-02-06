@@ -1,4 +1,4 @@
-[
+const petData = [
   {
     "id": "0",
     "petName": "Pepe",
@@ -175,3 +175,5 @@
     "aptDate": "2018-12-02 09:00"
   }
 ]
+
+export default petData;
